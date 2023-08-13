@@ -3,3 +3,17 @@ body {
     color: white;
 }
 
+body.weatherContainer {
+    background-color: rgb(10, 1, 136);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+}
+
+body.fiveDayForecastEl{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
