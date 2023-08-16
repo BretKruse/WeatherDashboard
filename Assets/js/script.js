@@ -4,7 +4,6 @@ const fetchButton = document.getElementById('fetchButton');
 const weatherContainer = document.getElementById('weatherContainer');
 const searchContainer = document.getElementById('searchContainer');
 const fiveDayForecastEl = document.getElementById('fiveDayForecast');
-const cityList = document.getElementById('cityList');
 
 // Add event listener to the fetch button
 fetchButton.addEventListener('click', fetchWeather);
@@ -29,7 +28,6 @@ function fetchWeather() {
 // Function to save city to local storage
 function saveCity(city) {
   let arr = JSON.parse(localStorage.getItem("cityArr")) || [];
-  //for (let i = 0; i < arr.length; i += i + 8) //added this to limit the number of cities saved to 8
   if (arr.length > 0) {
   arr.push(city);
   } else {
@@ -94,6 +92,7 @@ function displayFiveDay(coord) {
 //Get the city name from local storage
 function getCity() {
 
+  searchContainer.innerHTML = '';
   const getCityData = localStorage.getItem("cityArr") || [];
   if (getCityData.length > 0) {
    for (let i = 0; i < getCityData.length; i++) {
