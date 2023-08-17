@@ -9,6 +9,24 @@ h1 {
     font-style: italic;
 }
 
+#fetchButton {
+    background-color: rgb(0, 255, 21);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
+button {
+    background-color: rgb(0, 225, 255);
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px;
+}
+
 #weatherContainer {
     background-color: rgb(0, 0, 0);
     color: white;
@@ -19,19 +37,6 @@ h1 {
     display: flex;
     flex: auto;
     justify-content: center;
-}
-
-#weatherContainer | p {
-    background-color: rgb(255, 0, 0);
-    color: white;
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    display: flex;
-    flex: auto;
-    justify-content: center;
-
 }
 
 #fiveDayForecast{

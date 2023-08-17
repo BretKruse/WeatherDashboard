@@ -12,7 +12,6 @@ const apiKey = 'e43915da020a5f45540d61b33a0581ef'; // Replace with your OpenWeat
 // Function to fetch weather data for the current and five day forecast
 function fetchWeather() {
   const cityName = cityInput.value;
-  
   // Make a request to the OpenWeatherMap API
   fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`)
     .then(response => response.json())
@@ -28,12 +27,11 @@ function fetchWeather() {
 // Function to save city to local storage
 function saveCity(city) {
   let arr = JSON.parse(localStorage.getItem("cityArr")) || [];
-  if (arr.length > 0) {
-  arr.push(city);
-  } else {
-    arr = [city];
+  if (!arr.includes(city)) {
+    arr.push(city);
   };
   localStorage.setItem("cityArr", JSON.stringify(arr));
+  renderCityButtons();
 };
 
 // Function to display current weather information
@@ -90,15 +88,19 @@ function displayFiveDay(coord) {
 };
 
 //Get the city name from local storage
-function getCity() {
-
+function renderCityButtons() {
   searchContainer.innerHTML = '';
-  const getCityData = localStorage.getItem("cityArr") || [];
-  if (getCityData.length > 0) {
+  const getCityData = JSON.parse(localStorage.getItem("cityArr"));
+  console.log(getCityData)
+  if (getCityData !== null)  {
    for (let i = 0; i < getCityData.length; i++) {
     const history = document.createElement("button");
     history.innerText = getCityData[i];
     searchContainer.appendChild(history);
+    history.addEventListener("click", function(e){
+      cityInput.value = e.target.innerText;
+      fetchWeather();
+    });
    };
   };
 };
