@@ -19,9 +19,9 @@ In the search box in the top left, enter the name of the city you would like to 
 
 ## Credits
 
-Ismany Castro
-Tye Stanley
-Torre Taylor
+Ismany Castro,
+Tye Stanley,
+Torre Taylor,
 
 ## License
 
