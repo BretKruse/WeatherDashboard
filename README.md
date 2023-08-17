@@ -15,7 +15,7 @@ A traveler can use this tool to see the weather outlook for multiple cities so t
 
 In the search box in the top left, enter the name of the city you would like to see the weather for.  Click the search button and the current weather and 5 day forecast will be displayed.  The city will be added to the search history list.  Click on the city in the search history list to see the weather for that city again.
 
-[Weather Dashboard](assets/img/WeatherDashboardDisplay.png)
+![Weather Dashboard](assets/img/WeatherDashboardDisplay.png)
 
 ## Credits
 
